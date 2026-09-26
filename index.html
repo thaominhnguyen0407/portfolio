@@ -670,7 +670,7 @@
 
   .client-media-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 14px;
     width: 100%;
   }
@@ -844,48 +844,49 @@
     grid-auto-rows: 95px;
     gap: 14px;
     width: 100%;
-    padding: 8px 6px 24px 4px;
+    padding: 10px 10px 36px 12px;
     position: relative;
+    box-sizing: border-box;
   }
   .mockup-card-hero {
     grid-column: span 2;
     grid-row: span 3;
-    transform: rotate(-0.9deg);
+    transform: none;
   }
   .mockup-card-s1 {
     grid-column: span 1;
     grid-row: span 2;
-    transform: rotate(1.3deg) translateY(-6px);
+    transform: rotate(1.2deg) translateY(-4px);
   }
   .mockup-card-s2 {
     grid-column: span 1;
     grid-row: span 2;
-    transform: rotate(-1.5deg) translateY(8px);
+    transform: rotate(-1deg) translateY(6px);
   }
   .mockup-card-s3 {
     grid-column: span 1;
     grid-row: span 2;
-    transform: rotate(0.8deg) translateY(-4px);
+    transform: none;
   }
   .mockup-card-s4 {
     grid-column: span 1;
     grid-row: span 2;
-    transform: rotate(-1.1deg) translateY(6px);
+    transform: rotate(-0.8deg) translateY(4px);
   }
   .mockup-card-wide {
     grid-column: span 2;
     grid-row: span 2;
-    transform: rotate(-0.5deg) translateY(3px);
+    transform: rotate(-0.4deg) translateY(2px);
   }
   .mockup-card-s5 {
     grid-column: span 1;
     grid-row: span 2;
-    transform: rotate(1.6deg) translateY(-5px);
+    transform: none;
   }
   .mockup-card-s6 {
     grid-column: span 1;
     grid-row: span 2;
-    transform: rotate(-0.8deg) translateY(5px);
+    transform: rotate(-0.6deg) translateY(3px);
   }
 
   /* Research & Analytics Masonry Stage */
@@ -895,29 +896,30 @@
     grid-auto-rows: 110px;
     gap: 16px;
     width: 100%;
-    padding: 8px 6px 24px 4px;
+    padding: 10px 10px 36px 12px;
     position: relative;
+    box-sizing: border-box;
   }
   .research-card-hero {
     grid-column: span 2;
     grid-row: span 3;
-    transform: rotate(-0.8deg);
+    transform: none;
   }
   .research-card-s1 {
     grid-column: span 1;
     grid-row: span 3;
-    transform: rotate(1.4deg) translateY(-4px);
+    transform: rotate(1.2deg) translateY(-3px);
   }
   .research-card-s2 {
     grid-column: span 3;
     grid-row: span 2;
-    transform: rotate(-0.4deg) translateY(6px);
+    transform: none;
   }
 
   /* ========================================================
      ABOUT ME EDITORIAL SPREAD STYLES (EASY TO READ & LUXE)
      ======================================================== */
-  /* Tightened Editorial Spacing for About Me */
+  /* Editorial Spacing for About Me */
   .about-editorial-stage {
     display: flex;
     gap: 18px;
@@ -934,11 +936,11 @@
   }
   .about-section-heading {
     font-family: var(--serif-display);
-    font-size: 16.5px;
+    font-size: 18px;
     font-weight: 600;
     color: #1A1006;
     letter-spacing: -0.01em;
-    margin: 0 0 2px 0;
+    margin: 0 0 4px 0;
     line-height: 1.2;
   }
   .about-city-grid {
@@ -949,8 +951,8 @@
   .about-city-card {
     position: relative;
     width: 100%;
-    height: 86px;
-    border-radius: 5px;
+    height: 150px;
+    border-radius: 6px;
     overflow: hidden;
     background: #FAF8F5;
     border: 1px solid rgba(165, 105, 35, 0.22);
@@ -963,8 +965,17 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 3px;
+    border-radius: 4px;
     transition: transform 0.35s ease;
+  }
+  .about-city-card:nth-child(1) .about-city-img {
+    object-position: center 68%;
+  }
+  .about-city-card:nth-child(2) .about-city-img {
+    object-position: center 72%;
+  }
+  .about-city-card:nth-child(3) .about-city-img {
+    object-position: center 30%;
   }
   .about-city-card:hover .about-city-img {
     transform: scale(1.04);
@@ -987,32 +998,32 @@
   .about-city-tagline {
     font-family: var(--serif-body);
     font-style: italic;
-    font-size: 12px;
+    font-size: 12.5px;
     color: #5A3E22;
-    line-height: 1.4;
-    margin: 2px 0 0 0;
+    line-height: 1.45;
+    margin: 4px 0 0 0;
   }
   .about-col-right {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
   }
   .about-block-card {
     position: relative;
     background: #FAF8F5;
     border: 1px solid rgba(165, 105, 35, 0.22);
     border-radius: 6px;
-    padding: 10px 15px;
+    padding: 14px 18px;
     box-shadow: 0 4px 16px rgba(45, 30, 15, 0.07);
     box-sizing: border-box;
   }
   .about-lead-text {
     font-family: var(--sans);
-    font-size: 11.5px;
+    font-size: 13px;
     color: #3D2B19;
-    line-height: 1.38;
-    margin: 2px 0 4px 0;
+    line-height: 1.55;
+    margin: 4px 0 10px 0;
   }
   .about-portfolio-list {
     list-style: none;
@@ -1020,14 +1031,14 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
   }
   .about-portfolio-list li {
     font-family: var(--sans);
-    font-size: 11.5px;
+    font-size: 13px;
     color: #382717;
-    line-height: 1.35;
-    padding-left: 12px;
+    line-height: 1.55;
+    padding-left: 14px;
     position: relative;
   }
   .about-portfolio-list li::before {
@@ -1037,35 +1048,38 @@
     color: #8C5A24;
     font-weight: bold;
   }
-  .about-callout-quote {
-    font-family: var(--serif-body);
-    font-style: italic;
-    font-size: 11.5px;
-    color: #6A4B29;
-    border-left: 2px solid #8C5A24;
-    padding-left: 8px;
-    margin: 8px 0 0 0;
-    line-height: 1.35;
-  }
   .about-bottom-split-row {
     display: grid;
-    grid-template-columns: 1.35fr 1fr;
-    gap: 12px;
+    grid-template-columns: 1.55fr 1fr;
+    align-items: start;
+    gap: 14px;
+  }
+  .connect-card {
+    align-self: start;
+    padding: 14px 18px;
+  }
+  .into-card {
+    padding: 14px 18px;
   }
   .about-sub-heading {
     font-family: var(--serif-display);
-    font-size: 15px;
+    font-size: 16.5px;
     font-weight: 600;
     color: #1A1006;
-    margin: 0 0 2px 0;
+    margin: 0 0 6px 0;
     line-height: 1.2;
+  }
+  .about-into-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
   .about-into-content p {
     font-family: var(--sans);
-    font-size: 11.5px;
+    font-size: 13px;
     color: #382717;
-    line-height: 1.38;
-    margin: 2px 0;
+    line-height: 1.55;
+    margin: 0;
   }
   .about-interactive-link {
     color: #8C5A24;
@@ -1078,6 +1092,12 @@
   .about-interactive-link:hover {
     color: #C07A25;
   }
+  .about-connect-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+  }
   .connect-pill-btn {
     display: inline-flex;
     align-items: center;
@@ -1085,15 +1105,15 @@
     background: rgba(165, 105, 35, 0.08);
     border: 1px solid rgba(165, 105, 35, 0.28);
     border-radius: 16px;
-    padding: 5px 12px;
+    padding: 6px 14px;
     font-family: var(--sans);
-    font-size: 11.5px;
+    font-size: 12px;
     font-weight: 600;
     color: #1A1006;
     text-decoration: none;
+    cursor: pointer;
+    outline: none;
     transition: all 0.25s ease;
-    margin-right: 6px;
-    margin-top: 4px;
   }
   .connect-pill-btn:hover {
     background: #FFFDF8;
@@ -1852,18 +1872,21 @@
     position: relative;
     width: 100%;
     height: 290px;
-    cursor: default;
+    cursor: default !important;
     background: #FAF8F5;
     border: 1px solid rgba(165, 105, 35, 0.22);
     border-radius: 6px;
     padding: 6px;
     box-shadow: 0 7px 22px rgba(45, 30, 15, 0.09), 0 2px 6px rgba(0, 0, 0, 0.04);
     box-sizing: border-box;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transform: none !important;
+    transition: none !important;
   }
   .root-card:hover {
-    border-color: #f3d790;
-    box-shadow: 0 0 0 2px #f3d790, 0 14px 36px rgba(245, 185, 45, 0.35);
+    transform: none !important;
+    border-color: rgba(165, 105, 35, 0.22) !important;
+    box-shadow: 0 7px 22px rgba(45, 30, 15, 0.09), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    cursor: default !important;
   }
   .root-card .masonry-media-wrap video {
     width: 100%;
@@ -1887,7 +1910,7 @@
   <!-- LEFT STAGE -->
   <aside class="left-stage">
     <div class="stage-header">
-      <h1 class="stage-title">Minh Thao <span class="script-highlight">Nguyen</span></h1>
+      <h1 class="stage-title">Minh <span class="script-highlight">Thao</span> Nguyen</h1>
       <p class="stage-subtitle">Social Strategy & Marketing Operations</p>
     </div>
 
@@ -2029,8 +2052,8 @@ window.__IMG__ = {
     },
     {
       key: 'ogilvy',
-      title: 'Ogilvy (WPP) - Social Strategy Intern',
-      displayTitle: 'Ogilvy (WPP) — <span class="script-highlight">Social Strategy</span> Intern',
+      title: 'Ogilvy (WPP) - Social Strategy',
+      displayTitle: 'Ogilvy (WPP) — <span class="script-highlight">Social Strategy</span>',
       petal: IMG.petal3,
       kind: 'ogilvy',
       summary: 'Client: Premier Protein, Eli Lilly, Workday',
@@ -2253,8 +2276,8 @@ window.__IMG__ = {
     },
     {
       key: 'beat',
-      title: 'BEAT Network - Branding Intern',
-      displayTitle: 'BEAT Network — <span class="script-highlight">Branding</span> Intern',
+      title: 'BEAT Network - Branding',
+      displayTitle: 'BEAT Network — <span class="script-highlight">Branding</span>',
       petal: IMG.petal5,
       kind: 'beat',
       summary: '',
@@ -2271,8 +2294,8 @@ window.__IMG__ = {
     },
     {
       key: 'root',
-      title: 'Root Access - Growth Marketing Intern',
-      displayTitle: 'Root Access — <span class="script-highlight">Growth Marketing</span> Intern',
+      title: 'Root Access - Growth Marketing',
+      displayTitle: 'Root Access — <span class="script-highlight">Growth Marketing</span>',
       petal: IMG.petal6,
       kind: 'root',
       summary: '',
@@ -2611,7 +2634,7 @@ window.__IMG__ = {
 
     var gcTagline = document.createElement('p');
     gcTagline.className = 'about-city-tagline';
-    gcTagline.textContent = 'Three cities that have shaped how I see people, brands, and culture.';
+    gcTagline.textContent = 'These are three cities where I have lived, studied, and worked.';
     leftCol.appendChild(gcTagline);
 
     stage.appendChild(leftCol);
@@ -2651,11 +2674,6 @@ window.__IMG__ = {
     });
     pCard.appendChild(pList);
 
-    var pCallout = document.createElement('p');
-    pCallout.className = 'about-callout-quote';
-    pCallout.textContent = 'There’s a lot more strategic and operational thinking behind the work than a portfolio can show. Talk to me and you’ll see.';
-    pCard.appendChild(pCallout);
-
     rightCol.appendChild(pCard);
 
     // Bottom Split Row: Things I'm Into + Let's Connect
@@ -2677,9 +2695,9 @@ window.__IMG__ = {
 
     intoList.innerHTML = 
       '<p><strong>Content Creator:</strong> 12K+ followers on TikTok and YouTube (<a href="#" id="openMediaKitBtn" class="about-interactive-link">my Media Kit ↗</a>)</p>' +
-      '<p><strong>Writing:</strong> Follow me on Substack <a href="https://substack.com/@mihaothao" target="_blank" rel="noopener noreferrer" class="about-interactive-link">https://substack.com/@mihaothao</a></p>' +
+      '<p><strong>Writing:</strong> Follow me on <a href="https://substack.com/@mihaothao" target="_blank" rel="noopener noreferrer" class="about-interactive-link"><strong>Substack</strong></a></p>' +
       '<p><strong>AI:</strong> building, experimenting, and figuring out with Gemini, Claude, ChatGPT, and plenty of other tools.</p>' +
-      '<p><strong>Chess:</strong> competing in national competitions since I was 8. ♟️</p>';
+      '<p><strong>Chess:</strong> competing in national competitions since I was 8.</p>';
     intoCard.appendChild(intoList);
     bottomRow.appendChild(intoCard);
 
@@ -2697,7 +2715,7 @@ window.__IMG__ = {
     connLinks.className = 'about-connect-links';
     connLinks.innerHTML = 
       '<a href="http://linkedin.com/in/thaonguyen47" target="_blank" rel="noopener noreferrer" class="connect-pill-btn"><span class="pill-icon">↗</span> LinkedIn</a>' +
-      '<a href="mailto:minhthao.nguyen.ushn@gmail.com" class="connect-pill-btn"><span class="pill-icon">✉</span> Email</a>';
+      '<button type="button" id="aboutEmailBtn" class="connect-pill-btn"><span class="pill-icon">✉</span> <span id="aboutEmailLabel">Email</span></button>';
     connCard.appendChild(connLinks);
 
     bottomRow.appendChild(connCard);
@@ -2705,6 +2723,14 @@ window.__IMG__ = {
 
     stage.appendChild(rightCol);
     galleryBody.appendChild(stage);
+
+    var abtEmail = document.getElementById('aboutEmailBtn');
+    if (abtEmail) {
+      abtEmail.addEventListener('click', function(e) {
+        e.preventDefault();
+        copyEmailToClipboard('aboutEmailLabel');
+      });
+    }
 
     // Media Kit PDF Popup interaction matching campaign & research rules
     var mkBtn = document.getElementById('openMediaKitBtn');
@@ -2746,11 +2772,6 @@ window.__IMG__ = {
     rightCard.className = 'truelayer-coming-soon-card';
     injectCorners(rightCard);
 
-    var badge = document.createElement('span');
-    badge.className = 'coming-soon-badge';
-    badge.textContent = 'FINTECH • CASE STUDY';
-    rightCard.appendChild(badge);
-
     var title = document.createElement('h2');
     title.className = 'coming-soon-giant';
     title.innerHTML = 'Coming <span class="script-highlight">Soon</span>';
@@ -2760,16 +2781,6 @@ window.__IMG__ = {
     desc.className = 'coming-soon-desc';
     desc.textContent = 'Strategic frameworks, merchant acquisition pipelines, and commercial operations for Open Banking infrastructure across European markets.';
     rightCard.appendChild(desc);
-
-    var tags = document.createElement('div');
-    tags.className = 'coming-soon-tags';
-    ['Commercial Ops', 'Growth Funnels', 'FinTech APIs', 'London HQ'].forEach(function(t) {
-      var tag = document.createElement('span');
-      tag.className = 'coming-soon-tag';
-      tag.textContent = t;
-      tags.appendChild(tag);
-    });
-    rightCard.appendChild(tags);
 
     stage.appendChild(rightCard);
     galleryBody.appendChild(stage);
@@ -2829,7 +2840,7 @@ window.__IMG__ = {
 
     rootVideos.forEach(function(item, idx) {
       var card = document.createElement('div');
-      card.className = 'masonry-card root-card';
+      card.className = 'root-card';
 
       var wrap = document.createElement('div');
       wrap.className = 'masonry-media-wrap';
@@ -2841,11 +2852,6 @@ window.__IMG__ = {
       vid.playsInline = true;
       vid.src = item.src;
       wrap.appendChild(vid);
-
-      var badge = document.createElement('div');
-      badge.className = 'masonry-hover-badge';
-      badge.textContent = '↗ ' + item.title;
-      wrap.appendChild(badge);
 
       card.appendChild(wrap);
       stage.appendChild(card);
@@ -3158,7 +3164,7 @@ window.__IMG__ = {
       },
       {
         name: 'Carbone <span class="script-highlight">Fine Food</span>', nameRaw: 'Carbone Fine Food',
-        stats: ['Hospitality & CPG Amplification', 'Influencer Seeding'],
+        stats: [],
         items: [
           {
             type: 'video',
@@ -3185,7 +3191,7 @@ window.__IMG__ = {
       },
       {
         name: 'Citarella <span class="script-highlight">Gourmet Market</span>', nameRaw: 'Citarella Gourmet Market',
-        stats: ['NYC Gourmet Authority', 'Market Activation'],
+        stats: [],
         items: [
           {
             type: 'video',
@@ -3212,7 +3218,7 @@ window.__IMG__ = {
       },
       {
         name: 'Rachael <span class="script-highlight">Ray</span>', nameRaw: 'Rachael Ray',
-        stats: ['Celebrity Lifestyle & Home Culinary'],
+        stats: [],
         items: [
           {
             type: 'image',
@@ -3220,13 +3226,6 @@ window.__IMG__ = {
             link: 'https://www.instagram.com/p/DQh9zh8jz5C/',
             cls: 'door-item-card is-mailer',
             title: 'Rachael Ray Social Post'
-          },
-          {
-            type: 'video',
-            src: 'assets/door/rachael_video.mp4',
-            link: 'https://www.instagram.com/p/DQh9zh8jz5C/',
-            cls: 'door-item-card',
-            title: 'Rachael Ray Culinary Reel'
           }
         ]
       }
@@ -3244,15 +3243,17 @@ window.__IMG__ = {
       title.innerHTML = sec.name;
       header.appendChild(title);
 
-      var statsWrap = document.createElement('div');
-      statsWrap.className = 'client-group-stats';
-      sec.stats.forEach(function(st) {
-        var chip = document.createElement('span');
-        chip.className = 'client-stat-chip';
-        chip.textContent = st;
-        statsWrap.appendChild(chip);
-      });
-      header.appendChild(statsWrap);
+      if (sec.stats && sec.stats.length > 0) {
+        var statsWrap = document.createElement('div');
+        statsWrap.className = 'client-group-stats';
+        sec.stats.forEach(function(st) {
+          var chip = document.createElement('span');
+          chip.className = 'client-stat-chip';
+          chip.textContent = st;
+          statsWrap.appendChild(chip);
+        });
+        header.appendChild(statsWrap);
+      }
       group.appendChild(header);
 
       var mediaRow = document.createElement('div');
@@ -3718,7 +3719,49 @@ window.__IMG__ = {
   }
   drawRipples();
 
+  // Floating email copy button
+  var fltEmail = document.getElementById('floatingEmailBtn');
+  if (fltEmail) {
+    fltEmail.addEventListener('click', function(e) {
+      e.preventDefault();
+      copyEmailToClipboard('floatingEmailLabel');
+    });
+  }
+
 })();
+
+// Global Email Copy Utility
+function copyEmailToClipboard(labelId) {
+  var email = 'minhthao.nguyen.ushn@gmail.com';
+  function flash() {
+    var el = document.getElementById(labelId);
+    if (el) {
+      var orig = el.textContent;
+      el.textContent = 'Copied!';
+      setTimeout(function() { el.textContent = orig; }, 2000);
+    }
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(email).then(flash).catch(function() {
+      fallbackCopy(email);
+      flash();
+    });
+  } else {
+    fallbackCopy(email);
+    flash();
+  }
+}
+function fallbackCopy(text) {
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.left = '-9999px';
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  try { document.execCommand('copy'); } catch(err) {}
+  document.body.removeChild(ta);
+}
 </script>
 <!-- Persistent Floating Contact Buttons (Bottom-Right) -->
 <div class="fixed-floating-contact" id="floatingContact">
@@ -3726,10 +3769,10 @@ window.__IMG__ = {
     <svg class="floating-btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
     <span>LinkedIn</span>
   </a>
-  <a href="mailto:minhthao.nguyen.ushn@gmail.com" class="floating-btn email-btn" aria-label="Send Email">
+  <button type="button" class="floating-btn email-btn" id="floatingEmailBtn" aria-label="Copy Email">
     <svg class="floating-btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-    <span>Email</span>
-  </a>
+    <span id="floatingEmailLabel">Email</span>
+  </button>
 </div>
 </body>
 </html>
