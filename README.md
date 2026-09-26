@@ -13,13 +13,13 @@ Live Site: [https://thaominhnguyen0407.github.io/portfolio2/](https://thaominhng
 - **Zero Vertical Scrolling**: Balanced layout engineered to fit completely within single-screen viewports (1440×605).
 - **Categories**:
   1. About Me
-  2. Ogilvy
-  3. The Door
-  4. BEAT Network
-  5. Root Access
-  6. Mock-up Campaigns
-  7. Research & Analytics
-  8. AI Vibe Coding
+  2. TrueLayer
+  3. Ogilvy
+  4. The Door
+  5. BEAT Network
+  6. Root Access
+  7. Mock-up Campaigns
+  8. Research & Analytics
 
 ## Local Development
 
